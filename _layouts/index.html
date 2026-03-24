@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="post-list">
+  {% for post in site.posts %}
+  <article style="margin-bottom: 50px; border-bottom: 1px solid #eaeaea; padding-bottom: 40px;">
+    <h2 style="margin: 0 0 15px 0; font-size: 28px;">{{ post.title }}</h2>
+    <p style="margin: 0 0 15px 0; color: #444;">
+      {{ post.excerpt | strip_html | truncatewords: 30 }}
+    </p>
+    <a href="{{ post.url }}" class="read-more">Read More</a>
+  </article>
+  {% endfor %}
+</div>
