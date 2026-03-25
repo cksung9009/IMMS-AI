@@ -1,16 +1,19 @@
 ---
 layout: default
-title: Thoughts
 ---
 
-<div class="post-list">
+<div class="feed-timeline">
   {% for post in site.posts %}
-  <article style="margin-bottom: 50px; border-bottom: 1px solid #eaeaea; padding-bottom: 40px;">
-    <h2 style="margin: 0 0 15px 0; font-size: 28px;">{{ post.title }}</h2>
-    <p style="margin: 0 0 15px 0; color: #444;">
-      {{ post.excerpt | strip_html | truncatewords: 30 }}
-    </p>
-    <a href="{{ post.url }}" class="read-more">Read More</a>
-  </article>
+  <div class="feed-card" style="margin-bottom: 30px; padding: 25px; border: 1px solid #eaeaea; border-radius: 12px; background-color: #fafafa;">
+    
+    <div style="font-size: 13px; color: #888; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+      <strong>Justin</strong> posted on {{ post.date | date: "%B %d, %Y" }}
+    </div>
+    
+    <div style="font-size: 16px; color: #333; line-height: 1.6;">
+      {{ post.content }}
+    </div>
+    
+  </div>
   {% endfor %}
 </div>
