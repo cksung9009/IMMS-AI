@@ -1,19 +1,27 @@
 ---
 layout: default
+title: Thoughts
 ---
 
 <div class="feed-timeline">
   {% for post in site.posts %}
-  <div class="feed-card" style="margin-bottom: 30px; padding: 25px; border: 1px solid #eaeaea; border-radius: 12px; background-color: #fafafa;">
-    
-    <div style="font-size: 13px; color: #888; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-      <strong>Justin</strong> posted on {{ post.date | date: "%B %d, %Y" }}
-    </div>
-    
-    <div style="font-size: 16px; color: #333; line-height: 1.6;">
-      {{ post.content }}
-    </div>
-    
-  </div>
+     ...
   {% endfor %}
 </div>
+
+<br><hr><br>
+<script src="https://giscus.app/client.js"
+        data-repo="cksung9009/IMMS-AI"
+        data-repo-id="..."
+        data-category="General"
+        data-category-id="..."
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
